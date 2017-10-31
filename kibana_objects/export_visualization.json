@@ -1,0 +1,86 @@
+[
+  {
+    "_id": "84121d20-32f7-11e7-8d51-59c6c567aead",
+    "_type": "visualization",
+    "_source": {
+      "title": "AlertLevel 1",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"3\",\"params\":{\"customInterval\":\"2h\",\"customLabel\":\"Date\",\"extended_bounds\":{},\"field\":\"timestamp\",\"interval\":\"auto\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customLabel\":\"alert\",\"json\":\"{\\n  \\\"size\\\": 500,\\n  \\\"sort\\\": [\\n    {\\n      \\\"timestamp\\\": {\\n        \\\"order\\\": \\\"desc\\\",\\n        \\\"unmapped_type\\\": \\\"boolean\\\"\\n      }\\n    }\\n  ],\\n  \\\"query\\\": {\\n    \\\"bool\\\": {\\n      \\\"must\\\": [\\n        {\\n          \\\"query_string\\\": {\\n            \\\"query\\\": \\\"AlertLevel: 2\\\",\\n            \\\"analyze_wildcard\\\": true\\n          }\\n        },\\n        {\\n          \\\"range\\\": {\\n            \\\"timestamp\\\": {\\n              \\\"gte\\\": 1491750000000,\\n              \\\"lte\\\": 1491836399999,\\n              \\\"format\\\": \\\"epoch_millis\\\"\\n            }\\n          }\\n        }\\n      ],\\n      \\\"must_not\\\": []\\n    }\\n  },\\n  \\\"_source\\\": {\\n    \\\"excludes\\\": []\\n  },\\n  \\\"aggs\\\": {\\n    \\\"2\\\": {\\n      \\\"date_histogram\\\": {\\n        \\\"field\\\": \\\"timestamp\\\",\\n        \\\"interval\\\": \\\"30m\\\",\\n        \\\"time_zone\\\": \\\"Asia/Tokyo\\\",\\n        \\\"min_doc_count\\\": 1\\n      }\\n    }\\n  },\\n  \\\"stored_fields\\\": [\\n    \\\"*\\\"\\n  ],\\n  \\\"script_fields\\\": {},\\n  \\\"docvalue_fields\\\": [\\n    \\\"timestamp\\\"\\n  ],\\n  \\\"highlight\\\": {\\n    \\\"pre_tags\\\": [\\n      \\\"@kibana-highlighted-field@\\\"\\n    ],\\n    \\\"post_tags\\\": [\\n      \\\"@/kibana-highlighted-field@\\\"\\n    ],\\n    \\\"fields\\\": {\\n      \\\"*\\\": {\\n        \\\"highlight_query\\\": {\\n          \\\"bool\\\": {\\n            \\\"must\\\": [\\n              {\\n                \\\"query_string\\\": {\\n                  \\\"query\\\": \\\"AlertLevel: 2\\\",\\n                  \\\"analyze_wildcard\\\": true,\\n                  \\\"all_fields\\\": true\\n                }\\n              },\\n              {\\n                \\\"range\\\": {\\n                  \\\"timestamp\\\": {\\n                    \\\"gte\\\": 1491750000000,\\n                    \\\"lte\\\": 1491836399999,\\n                    \\\"format\\\": \\\"epoch_millis\\\"\\n                  }\\n                }\\n              }\\n            ],\\n            \\\"must_not\\\": []\\n          }\\n        }\\n      }\\n    },\\n    \\\"fragment_size\\\": 2147483647\\n  }\\n}\"},\"schema\":\"metric\",\"type\":\"count\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"legendPosition\":\"right\",\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"times\":[]},\"title\":\"AlertLevel 1\",\"type\":\"histogram\"}",
+      "uiStateJSON": "{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"colors\":{\"alert\":\"#EF843C\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"cmdlogs\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"AlertLevel: 1\"}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "79f771a0-32f7-11e7-8d51-59c6c567aead",
+    "_type": "visualization",
+    "_source": {
+      "title": "AlertLevel 2",
+      "visState": "{\"title\":\"AlertLevel 2\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"legendPosition\":\"right\",\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"times\":[]},\"aggs\":[{\"id\":\"3\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Date\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"json\":\"{\\n  \\\"size\\\": 500,\\n  \\\"sort\\\": [\\n    {\\n      \\\"timestamp\\\": {\\n        \\\"order\\\": \\\"desc\\\",\\n        \\\"unmapped_type\\\": \\\"boolean\\\"\\n      }\\n    }\\n  ],\\n  \\\"query\\\": {\\n    \\\"bool\\\": {\\n      \\\"must\\\": [\\n        {\\n          \\\"query_string\\\": {\\n            \\\"query\\\": \\\"AlertLevel: 2\\\",\\n            \\\"analyze_wildcard\\\": true\\n          }\\n        },\\n        {\\n          \\\"range\\\": {\\n            \\\"timestamp\\\": {\\n              \\\"gte\\\": 1491750000000,\\n              \\\"lte\\\": 1491836399999,\\n              \\\"format\\\": \\\"epoch_millis\\\"\\n            }\\n          }\\n        }\\n      ],\\n      \\\"must_not\\\": []\\n    }\\n  },\\n  \\\"_source\\\": {\\n    \\\"excludes\\\": []\\n  },\\n  \\\"aggs\\\": {\\n    \\\"2\\\": {\\n      \\\"date_histogram\\\": {\\n        \\\"field\\\": \\\"timestamp\\\",\\n        \\\"interval\\\": \\\"30m\\\",\\n        \\\"time_zone\\\": \\\"Asia/Tokyo\\\",\\n        \\\"min_doc_count\\\": 1\\n      }\\n    }\\n  },\\n  \\\"stored_fields\\\": [\\n    \\\"*\\\"\\n  ],\\n  \\\"script_fields\\\": {},\\n  \\\"docvalue_fields\\\": [\\n    \\\"timestamp\\\"\\n  ],\\n  \\\"highlight\\\": {\\n    \\\"pre_tags\\\": [\\n      \\\"@kibana-highlighted-field@\\\"\\n    ],\\n    \\\"post_tags\\\": [\\n      \\\"@/kibana-highlighted-field@\\\"\\n    ],\\n    \\\"fields\\\": {\\n      \\\"*\\\": {\\n        \\\"highlight_query\\\": {\\n          \\\"bool\\\": {\\n            \\\"must\\\": [\\n              {\\n                \\\"query_string\\\": {\\n                  \\\"query\\\": \\\"AlertLevel: 2\\\",\\n                  \\\"analyze_wildcard\\\": true,\\n                  \\\"all_fields\\\": true\\n                }\\n              },\\n              {\\n                \\\"range\\\": {\\n                  \\\"timestamp\\\": {\\n                    \\\"gte\\\": 1491750000000,\\n                    \\\"lte\\\": 1491836399999,\\n                    \\\"format\\\": \\\"epoch_millis\\\"\\n                  }\\n                }\\n              }\\n            ],\\n            \\\"must_not\\\": []\\n          }\\n        }\\n      }\\n    },\\n    \\\"fragment_size\\\": 2147483647\\n  }\\n}\",\"customLabel\":\"alert\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"spy\":{\"mode\":{\"name\":null,\"fill\":false}},\"vis\":{\"colors\":{\"alert\":\"#BF1B00\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"cmdlogs\",\"query\":{\"query_string\":{\"query\":\"AlertLevel: 2\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "9afb7a20-3303-11e7-9bd5-a3815fb7533d",
+    "_type": "visualization",
+    "_source": {
+      "title": "AlertLevel Chart",
+      "visState": "{\"title\":\"AlertLevel Chart\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"AlertLevel\",\"customLabel\":\"AlertLevel\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"AlertLevel\",\"interval\":1,\"min_doc_count\":true,\"extended_bounds\":{\"min\":0,\"max\":2},\"customLabel\":\"AlertLevel\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"1\":\"#E0752D\",\"2\":\"#BF1B00\"},\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"cmdlogs\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "709d76b0-32fa-11e7-8d51-59c6c567aead",
+    "_type": "visualization",
+    "_source": {
+      "title": "All Command Log",
+      "visState": "{\"title\":\"All Command Log\",\"type\":\"histogram\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{},\"customLabel\":\"Date\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"cmdlogs\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "f0cf4250-3304-11e7-9bd5-a3815fb7533d",
+    "_type": "visualization",
+    "_source": {
+      "title": "Count AlertLevel 1",
+      "visState": "{\"title\":\"Count AlertLevel 1\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"AlertLevel\",\"customLabel\":\"Count AlertLevel 2\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"cmdlogs\",\"query\":{\"query_string\":{\"query\":\"AlertLevel: 1\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "c3216180-3304-11e7-9bd5-a3815fb7533d",
+    "_type": "visualization",
+    "_source": {
+      "title": "Count AlertLevel 2",
+      "visState": "{\"title\":\"Count AlertLevel 2\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"AlertLevel\",\"customLabel\":\"Count AlertLevel 2\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"cmdlogs\",\"query\":{\"query_string\":{\"query\":\"AlertLevel: 2\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  }
+]

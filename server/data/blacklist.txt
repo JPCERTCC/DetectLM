@@ -1,0 +1,7 @@
+sekurlsa::
+kerberos::
+privilege::
+crypto::
+lsadump::
+psexec
+inetl\logs

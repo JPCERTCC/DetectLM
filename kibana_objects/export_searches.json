@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "e7917660-3311-11e7-9bd5-a3815fb7533d",
+    "_type": "search",
+    "_source": {
+      "title": "Log Search",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "AlertLevel",
+        "Hostname",
+        "command",
+        "Ignore"
+      ],
+      "sort": [
+        "timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"cmdlogs\",\"highlightAll\":true,\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  }
+]
